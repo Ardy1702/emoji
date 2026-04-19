@@ -1,0 +1,127 @@
+body {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.frame {
+  padding: 12px;
+  border-radius: 20px;
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+
+.face {
+  width: 300px;
+  height: 150px;
+}
+
+/* EYES */
+.eye {
+  fill: none;
+  stroke: white;
+  stroke-width: 4;
+  filter: drop-shadow(0 0 8px white);
+}
+
+/* PUPIL */
+.pupil {
+  fill: white;
+}
+
+/* BLUSH */
+.blush {
+  fill: #ff6699;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.showBlush {
+  opacity: 0.6;
+}
+
+/* LASHES */
+.lashes {
+  stroke: white;
+  stroke-width: 3;
+  fill: none;
+}
+
+/* MOUTH */
+.mouth {
+  stroke: white;
+  stroke-width: 5;
+  fill: none;
+}
+
+/* TONGUE */
+.tongue {
+  fill: #ff3355;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.3s ease;
+}
+
+.showTongue {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* TEARS */
+.tear {
+  fill: white;
+  opacity: 0;
+}
+
+.showTear {
+  opacity: 1;
+  animation: drop 1s infinite;
+}
+
+@keyframes drop {
+  to { transform: translateY(25px); opacity: 0; }
+}
+
+/* ZZZ */
+.zzz {
+  fill: white;
+  font-size: 14px;
+  opacity: 0;
+}
+
+.showZ {
+  opacity: 1;
+  animation: floatZ 2s infinite;
+}
+
+@keyframes floatZ {
+  to { transform: translateY(-20px); opacity: 0; }
+}
+
+/* GLASSES */
+.glasses {
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+}
+
+.showGlass {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glasses-line {
+  stroke: white;
+  stroke-width: 2;
+  opacity: 0;
+}
+
+.showGlassLine {
+  opacity: 1;
+}
